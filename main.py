@@ -58,4 +58,4 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         pass
     except IndexError:
-        print("Missing arguments (follow/unfollow).\nRead the README for more information.")
+        print("Missing argument (follow/unfollow).\nRead the README for more information.")
