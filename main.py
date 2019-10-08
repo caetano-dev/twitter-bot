@@ -49,7 +49,7 @@ def main():
         unfollow()
 
     else:
-        return
+        print("Wrong argument (follow/unfollow).\nRead the README for more information.")
 
 
 if __name__ == '__main__':
