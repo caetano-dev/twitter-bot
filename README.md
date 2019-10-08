@@ -18,7 +18,7 @@ Enter a screen like this:
 
 ![likes user](https://i.imgur.com/uH0COFl.png)
 
-Add a new line with `follow()` or `unfollow()` and run the code.
+Open the terminal and within the script's directory type `python main.py follow` or `python main.py unfollow` to run the script.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
