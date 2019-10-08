@@ -6,7 +6,7 @@ from pyautogui import click, locateOnScreen, locateAllOnScreen, scroll
 
 def follow() -> None:
     while running < 5:
-        locations = locateAllOnScreen('./follow.png', confidence=0.85)
+        locations = locateAllOnScreen('./img/follow.png', confidence=0.85)
 
         if not locations:
             running += 1
@@ -20,7 +20,7 @@ def follow() -> None:
 
 def unfollow() -> None:
     while running < 5:
-        locations = locateAllOnScreen('./unfollow.png', confidence=0.85)
+        locations = locateAllOnScreen('./img/unfollow.png', confidence=0.85)
 
         if not locations:
             running += 1
@@ -29,7 +29,7 @@ def unfollow() -> None:
             click(location)
             sleep(1)
 
-            click(locateOnScreen('./confirm.png', confidence=0.9))
+            click(locateOnScreen('./img/confirm.png', confidence=0.9))
 
             sleep(1)
         scroll(-200)
