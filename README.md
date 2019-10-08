@@ -14,7 +14,7 @@ pip install pyautogui opencv-python
 
 ## Usage
 
-Enter a screen like this: 
+Enter a screen like this:
 
 ![likes user](https://i.imgur.com/uH0COFl.png)
 
