@@ -5,8 +5,11 @@ from pyautogui import click, locateOnScreen, locateAllOnScreen, scroll
 
 
 def follow() -> None:
+    running = 0
+
     while running < 5:
-        locations = locateAllOnScreen('./follow.png', confidence=0.85)
+        locations = list(locateAllOnScreen(
+            './img/follow.png', confidence=0.8))
 
         if not locations:
             running += 1
@@ -19,8 +22,11 @@ def follow() -> None:
 
 
 def unfollow() -> None:
+    running = 0
+
     while running < 5:
-        locations = locateAllOnScreen('./unfollow.png', confidence=0.85)
+        locations = list(locateAllOnScreen(
+            './img/unfollow.png', confidence=0.85))
 
         if not locations:
             running += 1
@@ -29,16 +35,13 @@ def unfollow() -> None:
             click(location)
             sleep(1)
 
-            click(locateOnScreen('./confirm.png', confidence=0.9))
+            click(locateOnScreen('./img/confirm.png', confidence=0.9))
 
             sleep(1)
         scroll(-200)
 
 
 def main():
-    global running
-    running = 0
-
     if argv[1] == 'follow':
         follow()
 
@@ -46,7 +49,7 @@ def main():
         unfollow()
 
     else:
-        return
+        print("Wrong argument (follow/unfollow).\nRead the README for more information.")
 
 
 if __name__ == '__main__':
@@ -54,3 +57,5 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt:
         pass
+    except IndexError:
+        print("Missing argument (follow/unfollow).\nRead the README for more information.")
