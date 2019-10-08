@@ -26,7 +26,7 @@ def unfollow() -> None:
 
     while running < 5:
         locations = list(locateAllOnScreen(
-            './img/unfollow.png', confidence=0.8))
+            './img/unfollow.png', confidence=0.85))
 
         if not locations:
             running += 1
